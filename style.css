@@ -1,0 +1,367 @@
+
+/* 共通 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #222;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site {
+  max-width: 1332px;
+  margin: 35px auto;
+  border: 1px solid #777;
+}
+
+/* ヘッダー */
+
+.header {
+  height: 77px;
+  padding: 0 42px;
+  border-bottom: 1px solid #aaa;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 31px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  font-size: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* トップページ */
+
+.home-main {
+  padding: 20px 25px 43px;
+}
+
+.hero {
+  height: 375px;
+  background: #ddd;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 24px;
+}
+
+.hero h1 {
+  font-size: 37px;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* メインメニュー */
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 32px 58px 43px;
+}
+
+.choice {
+  height: 86px;
+  border: 1px solid #aaa;
+  background: #e1e1e1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 24px;
+}
+
+a.choice:hover {
+  background: #d2d2d2;
+}
+
+/* 紹介エリア */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature {
+  min-height: 302px;
+  border: 1px solid #aaa;
+  padding: 19px 25px 22px;
+  text-align: center;
+}
+
+.image-placeholder {
+  height: 135px;
+  background: #ddd;
+}
+
+.feature h2 {
+  font-size: 21px;
+  font-weight: normal;
+  margin: 18px 0 14px;
+}
+
+.feature p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+a.feature-link:hover {
+  border-color: #555;
+}
+
+/* CARDページ */
+
+.card-main {
+  min-height: 750px;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.card-main > h1 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+
+.card-main > p {
+  font-size: 16px;
+}
+
+.draw-card {
+  width: 240px;
+  height: 300px;
+  margin: 35px auto 25px;
+  background: #ddd;
+  border: 1px solid #aaa;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+#question {
+  font-size: 45px;
+}
+
+.draw-card h2 {
+  font-size: 23px;
+  margin: 14px 0 5px;
+}
+
+.draw-card p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+#draw-button {
+  padding: 14px 34px;
+  background: #eee;
+  border: 1px solid #888;
+  font: inherit;
+  cursor: pointer;
+}
+
+#draw-button:hover {
+  background: #ddd;
+}
+
+.back {
+  margin-top: 25px;
+}
+
+.back a {
+  text-decoration: underline;
+}
+
+/* スマートフォン対応 */
+
+@media (max-width: 800px) {
+
+  .site {
+    margin: 0;
+    border: none;
+  }
+
+  .header {
+    height: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  nav {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .home-main {
+    padding: 18px;
+  }
+
+  .hero {
+    height: 290px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .choices {
+    gap: 12px;
+    margin: 20px 0 28px;
+  }
+
+  .choice {
+    height: 68px;
+    font-size: 17px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature {
+    min-height: 0;
+  }
+
+  .feature p {
+    font-size: 14px;
+  }
+}
+
+/* ABOUTページ */
+
+.about-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 30px 80px;
+}
+
+.about-main > h1 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.about-visual {
+  height: 260px;
+  background: #ddd;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px;
+}
+
+.about-visual h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about-visual p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-section {
+  margin-top: 55px;
+}
+
+.about-section h2 {
+  font-size: 23px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 12px;
+}
+
+.about-section p {
+  font-size: 15px;
+  line-height: 2;
+}
+
+.about-items {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.about-item {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 25px;
+}
+
+.about-item h3 {
+  font-size: 20px;
+}
+
+.about-back {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.about-back a {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .about-main {
+    padding: 35px 20px;
+  }
+
+  .about-items {
+    flex-direction: column;
+  }
+
+  .about-visual h2 {
+    font-size: 25px;
+  }
+}
